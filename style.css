@@ -1,0 +1,135 @@
+/* VALDE ATT LÄGGA LITE TID PÅ MIN CSS-KOD DÅ JAG TYCKER DET ÄR ROLIGT MED FONT-END OCH VILLE FÅ IN LITE MER AV DET ÄVEN HÄR */
+
+body {
+  /* BAKGRUNDSBILD PÅ SIDAN */
+  background: url("img/bgr.jpg");
+}
+
+.container {
+  /* HÄR "GREPPAR" VI SJÄLVA CONTAINERN. */
+  position: absolute;  /* JAG FICK SÄTTA DENNA SOM ABSOLUTE I FÖRHÅLLANDE TILL "FÖRÄLDERN", SOM I DETTA FALLET ÄR BODYN, FÖR ATT KUNNA GÖRA DEN GENOMSKINLIG/BLURRAD MOT SJÄLVA BAKGRUNDEN */
+  height: 25pc; /* ANVÄNDE MIG HÄR AV PICA, FÖR ATT FÅ IN LITE OLIKA MÅTTENHETER */
+  width: 20pc;
+  margin: auto; /* HITTAR AUTOMATISKT MARGIN NÄR MAN ÄNDRAR STORLEK PÅ SJÄLVA FÖNSTRET */
+  top: 30px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  backdrop-filter: blur(3px); /* EFTERSOM POSITIONEN PÅ CONTAINERN ÄR SATT TILL ABSOLUTE, BLIR DEN BLURRAD MED DENNA EFFEKT */
+  box-shadow: 0 0 55px; /* SKUGGA RUNT SJÄLVA CONTAINER-BOXEN FÖR ATT DEN SKA "POPPA" LITE MER */
+  border-radius: 3px; /* LÄTT RUNDADE HÖRN PÅ CONTAINERN */
+}
+
+h1 {
+  color: #fff;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: auto;
+  padding: 20px 0 50px 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  font-size: 50px;
+  text-align: center;
+  text-shadow: 0 0 55px;
+}
+
+.addTxt {
+  position: absolute;
+  height: 5px;
+  width: 60%;
+  margin: auto;
+  top: 25px;
+  right: 0;
+  left: 0;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  padding: 20px;
+  padding-right: 50px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.addBtn {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  margin: auto;
+  top: 15px;
+  right: 35px;
+  cursor: pointer;
+  background: transparent;
+  outline: none;
+  border: 0;
+}
+
+.addBtn img {
+  position: absolute;
+  height: 30px;
+  margin: auto;
+  top: 25px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.list {
+    position: absolute;
+    height: 75%; /* ANGER HUR MÅNGA PROCENT AV SIN FÖRÄLDER (CONTAINERN) VARJE LIST-ITEM SKA TA UPP */
+    width: 100%;
+    margin: auto;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: scroll; /* GÖR SÅ ATT MAN KAN SCROLLA VERTIKALT OM DET BLIR MÅNGA ITEMS I LISTAN */
+    overflow-x: hidden; /* GÖR SÅ ATT DET INTE BLIR EN SCROLLBAR HORISONTALT OM DET BLIR EN LÅNG ITEM I LISTAN */
+}
+
+.list::-webkit-scrollbar {
+  /* GÖR SÅ ATT "SCROLLBAREN" INTE SYNS*/
+    -webkit-appearance: none; 
+    appearance: none;
+}
+
+/* EN KLASS SOM SKAPAS VIA JS NÄR NÅGOT LÄGGS TILL I LISTAN (NÄR FUNKTIONEN AV KNAPPEN KLICKAS PÅ) */
+.element {
+  position: relative;
+  height: fit-content;
+  width: 55%;
+  right: 0;
+  margin: 10px;
+  text-align: left;
+  transition: .2s;
+  padding: 10px;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 2px;
+  padding-right: 80px;
+  word-wrap: break-word; /* GÖR SÅ ATT ORDEN FORTSÄTTER PÅ NÄSTA RAD VID LÅNG "TODO" */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.element:hover {
+  /* GÖR SÅ ATT DET BLIR EN LITEN KUL ANIMATION NÄR MAN HOVRAR ÖVER EN TODO */
+  transform: scale(1.1);
+}
+
+.check {
+  position: absolute;
+  margin: auto;
+  height: 40px;
+  top: 0;
+  bottom: 0;
+  right: 50px;
+}
+
+.trash {
+  position: absolute;
+  margin: auto;
+  height: 25px;
+  top: 0;
+  bottom: 0;
+  right: 10px;
+}
+

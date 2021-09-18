@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Frida Lindberg">
+    <meta name="copyright" content="Teknikhögskolan .NET-utvecklare 2021">
+    <title>ToDo List || Frida Lindberg</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <H1>Todo-List</H1>
+    <!-- SKAPAR EN CONTAINER FÖR ALLA TODOS -->
+    <div class="container">
+        <!-- SKAPAR EN TEXTRUTA FÖR ATT KUNNA FYLLA I TODOS MED TEXTEN "ATT GÖRA" -->
+        <input type="text" class="addTxt" placeholder="Att göra..">
+        <!-- EN KNAPP MED EN LÄNK TILL EN BAKGRUNDSBILD SAMT EN LÄNKAD "ONCLICK"-FUNKTION TILL JS -->
+        <button class="addBtn" onclick="addElement()">
+            <img src="./img/addBtn.jpg" alt="">
+        </button>
+        <!-- EN TOM DIV FÖR ATT SENARE KUNNA LÄGA TILL LIST-ITEMS MED HJÄLP AV JS -->
+        <div class="list"></div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
